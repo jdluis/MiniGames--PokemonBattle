@@ -99,12 +99,14 @@ function start() {
         console.log(pikachu.hp);
         playerTime = false;
         setValuesHp();
+        checkIfIsDead();
       });
 
       specialATack.addEventListener("click", () => {
         pikachu.special_atack(pikachu, charmander);
         playerTime = false;
         setValuesHp();
+        checkIfIsDead();
       });
 
       defend.addEventListener("click", () => {
@@ -113,11 +115,13 @@ function start() {
 
         playerTime = false;
         setValuesHp();
+        checkIfIsDead();
       });
 
       run.addEventListener("click", () => {
         pikachu.run(pikachu);
         playerTime = false;
+        checkIfIsDead();
       });
     }
 
@@ -128,16 +132,18 @@ function start() {
       console.log("COMPUTER ATACK");
       playerTime = true;
       setValuesHp();
+      checkIfIsDead();
     }
-  } else {
-    //NO FUNCIONA EL ELSE NO SÉ PQ
-    //si uno llega a zero entonces devolver el perdedor
-    pikachu.hp <= 0
-      ? gameFinish(pikachu)
-      : charmander.hp <= 0
-      ? gameFinish(charmander)
-      : console.log("continue");
-  }
+  } 
+}
+
+//mejorar funcion por si en el futuro pongo otros pokemons.
+function checkIfIsDead () {
+  pikachu.hp <= 0
+    ? gameFinish(pikachu)
+    : charmander.hp <= 0
+    ? gameFinish(charmander)
+    : console.log("continue");
 }
 
 //set hp values
