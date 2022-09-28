@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="overScreen start_container">
+        <button id="start">START</button>
+    </div> 
+   <!--  <div id="overScreen"></div> -->
+
+    <h1 class="title">Pokemon Battle</h1>
+    <div class="container">
+        <div class="battle_scenary">
+            <div class="pokemon-info pokemon-info_left">
+                <div>
+                    <p id="pokemon_left_name">Pikachu</p>
+                    <p>LVL: <span id="pokemon_left_LVL"></span>8</p>
+
+                </div>
+                <p >HP: <span id="pokemon_left_hp"></span> </p>
+            </div>
+            <div class="pokemon-info pokemon-info_right">
+                <div>
+                    <p id="pokemon_right_name">Ghost</p>
+                    <p>LVL: <span id="pokemon_right_LVL"></span>8</p>
+                </div>
+                <p>HP: <span id="pokemon_right_hp"></span> </p>
+            </div>
+
+            <div class="pokemon pokemon_left">
+                <img id="pokemon_left_img" src="./assets/pikachu.png" alt="pokemon">
+            </div>
+            <div class=" pokemon pokemon_right">
+                <img id="pokemon_right_img" src="./assets/charmander.png" alt="pokemon">
+            </div>
+        </div>
+        <div class="battle-info">
+            <div class="battle-info_text">
+                <p>What`s your next atack?</p>
+            </div>
+            <div class="battle-info_controls">
+                <div>
+                    <button id="basicAtack">Basic Atack</button>
+                 </div>
+                <div>
+                    <button id="specialATack">Special Atack</button>
+                </div>
+                <div>
+                    <button id="defend">Defend</button>
+                </div>
+                <div>
+                    <button id="run">Run</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/app.js"></script>
+</body>
+
+</html>
